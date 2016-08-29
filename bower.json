@@ -12,7 +12,7 @@
     "test",
     "tests"
   ],
-  "endpoint": "https://github.com/caitp/angular-drop-bower.git",
+  "endpoint": "https://github.com/willnew/angular-drop-bower.git",
   "main": "angular-drop.min.js",
   "dependencies": {}
 }
