@@ -363,7 +363,12 @@
           $draggable.element = element
           $draggable.options = options
 
-          element.on('mousedown', $draggable.dragStart)
+          element.on('mousedown', (e) => {
+            var toNode = e.toElement.nodeName
+            if (toNode !== 'SELECT' && toNode !== 'INPUT' && toNode !== 'BUTTON') {
+              $draggable.dragStart()
+            }
+          })
 
           element.data('$draggable', $draggable)
           return $draggable
