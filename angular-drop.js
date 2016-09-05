@@ -363,7 +363,7 @@
           $draggable.element = element
           $draggable.options = options
 
-          element.on('mousedown', (e) => {
+          element.on('mousedown', function (e) {
             var toNode = e.toElement.nodeName
             if (toNode !== 'SELECT' && toNode !== 'INPUT' && toNode !== 'BUTTON') {
               $draggable.dragStart()
@@ -1118,7 +1118,7 @@
         $drop: $dropProvider
       })
     }]).directive({
-      draggable: draggableDirective,
+      ngdraggable: draggableDirective,
       droppable: droppableDirective
     })
   }
